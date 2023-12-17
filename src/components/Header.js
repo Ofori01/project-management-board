@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div className='bg-blue-500 h-full flex flex-col items-center justify-center text-white'>
-      <h1 className='h-16'> Project Management Board </h1>
+      <h1 className='h-16 text-6xl'> Project Management Board </h1>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const Board = () => {
     {id:4, title:'Done'}
   ]
   return (
-    <div>
+    <div className='flex m-[5%] flex-row justify-between '>
       {lanes.map(
         ({title,id})=> <Lane key={id} title={title} />
       )}
