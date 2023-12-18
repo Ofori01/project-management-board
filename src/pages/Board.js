@@ -8,21 +8,7 @@ const Board = () => {
     {id:3, title: 'Review'},
     {id:4, title:'Done'}
   ];
-const [loading, setLoading]= useState();
-const [error, setError] = useState();
-const [tasks,setTasks] = useState([]);
 
-useEffect(
-  ()=>{
-    setLoading(true);
-    fetch('https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks')
-    .then((data)=>data.json())
-    .then(setTasks)
-    .catch((e)=>setError(e.message))
-    .finally(()=>setLoading(false))
-
-  },[]
-)
 
   return (
     <div className='flex m-4 flex-row gap-1 justify-between '>
