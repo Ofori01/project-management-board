@@ -10,7 +10,7 @@ const Board = () => {
   ];
 const [loading, setLoading]= useState();
 const [error, setError] = useState();
-const [tasks,setTasks] = useState();
+const [tasks,setTasks] = useState([]);
 
 useEffect(
   ()=>{
@@ -25,7 +25,7 @@ useEffect(
 )
 
   return (
-    <div className='flex m-4 flex-row justify-between '>
+    <div className='flex m-4 flex-row gap-1 justify-between '>
       {lanes.map(
         ({title,id})=> <Lane key={id} title={title} loading={loading} error={error} tasks={tasks.filter((task)=> task.lane===id)} />
       )}
