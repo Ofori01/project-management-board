@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import Lane from '../components/Lane'
+import useDataFetching from '../hooks/useDataFetching';
 
 const Board = () => {
   const lanes = [
@@ -8,7 +9,7 @@ const Board = () => {
     {id:3, title: 'Review'},
     {id:4, title:'Done'}
   ];
-
+  const [loading,error,tasks]= useDataFetching('https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks')
 
   return (
     <div className='flex m-4 flex-row gap-1 justify-between '>
